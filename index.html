@@ -48,6 +48,15 @@
   }
   footer{text-align:center; color:var(--muted); font-size:13px; padding:26px 18px 40px}
   code{background:#EEF6FA; padding:2px 6px; border-radius:5px; font-size:14px}
+
+  .tabs{display:flex; flex-wrap:wrap; gap:8px; justify-content:center; margin:0 0 22px}
+  .tab{
+    font:inherit; font-size:13px; font-weight:600; cursor:pointer;
+    background:#FFFFFF; color:#0B3B52; border:1px solid var(--line);
+    border-radius:999px; padding:8px 14px;
+  }
+  .tab.on{background:var(--accent); color:#FFFFFF; border-color:var(--accent)}
+  [hidden]{display:none !important}
 </style>
 </head>
 <body>
@@ -64,7 +73,16 @@
 
   <p class="updated">Last updated: 11 September 2026</p>
 
-  <p class="lead">
+  <div class="tabs">
+    <button class="tab on" data-ma="en">🇬🇧 English</button>
+    <button class="tab" data-ma="vi">🇻🇳 Tiếng Việt</button>
+    <button class="tab" data-ma="es">🇪🇸 Español</button>
+    <button class="tab" data-ma="pt">🇧🇷 Português</button>
+    <button class="tab" data-ma="id">🇮🇩 Bahasa Indonesia</button>
+  </div>
+
+  <section class="ban" data-ma="en">
+<p class="lead">
     Tiny Ocean does not ask for your name, email, phone number or any account.
     Everything you do in the game is stored <strong>only on your own device</strong>.
     We never see it. The one exception is advertising.
@@ -133,10 +151,9 @@
 
   <h2>Contact</h2>
   <p>Questions about this policy: <a href="mailto:hatisoftcor@gmail.com">hatisoftcor@gmail.com</a></p>
-
-  <span class="lang">🇻🇳 Bản tiếng Việt</span>
-
-  <h2>Tóm tắt</h2>
+  </section>
+  <section class="ban" data-ma="vi" hidden>
+<h2>Tóm tắt</h2>
   <p class="lead">
     Tiny Ocean không hỏi tên, email, số điện thoại hay bất kỳ tài khoản nào.
     Mọi thứ bạn làm trong game được lưu <strong>chỉ trong máy của bạn</strong>.
@@ -192,11 +209,182 @@
 
   <h2>Liên hệ</h2>
   <p>Thắc mắc về chính sách này: <a href="mailto:hatisoftcor@gmail.com">hatisoftcor@gmail.com</a></p>
+  </section>
+  <section class="ban" data-ma="es" hidden>
+<p class="lead">
+    Tiny Ocean no pide tu nombre, correo, teléfono ni ninguna cuenta.
+    Todo lo que haces en el juego se guarda <strong>solo en tu propio
+    dispositivo</strong>. Nosotros nunca lo vemos. La única excepción es la
+    publicidad.
+  </p>
+
+  <h2>Qué guarda la app</h2>
+  <p>Guardado solo en tu dispositivo, nunca se envía a ningún sitio:</p>
+  <ul>
+    <li>Mejor puntuación y puntos totales</li>
+    <li>Cuáles de las diez especies has descubierto</li>
+    <li>Qué escenarios has desbloqueado y cuál usas</li>
+    <li>Tu partida sin terminar, para que puedas volver a ella</li>
+    <li>Sonido activado o no, y el idioma elegido</li>
+  </ul>
+  <p>Desinstalar la app borra todo. No hay copia de seguridad ni servidor.</p>
+
+  <h2>Publicidad</h2>
+  <p>Usamos <strong>Google AdMob</strong> para mostrar anuncios de banner,
+     intersticiales y con recompensa. Para ello, Google puede recoger:</p>
+  <ul>
+    <li>Un identificador de publicidad (un ID que puedes restablecer, no tu nombre)</li>
+    <li>Ubicación aproximada deducida de la dirección IP</li>
+    <li>Tipo de dispositivo, versión del sistema y señales básicas de uso</li>
+  </ul>
+  <p>Configuramos AdMob con una clasificación máxima de contenido
+     <strong>G (apto para todos)</strong>.</p>
+  <p>Puedes restablecer o borrar tu identificador de publicidad cuando quieras en
+     <em>Ajustes → Google → Anuncios</em>.</p>
+
+  <h2>Menores</h2>
+  <p>Todo el contenido tiene clasificación G y es apto para el público general.
+     El juego <strong>no está dirigido a menores de 13 años</strong>: su público
+     objetivo en Google Play es de 13 años en adelante. No recogemos a sabiendas
+     información personal de nadie, incluidos los menores.</p>
+
+  <h2>Permisos</h2>
+  <p>La app solo pide los permisos necesarios para mostrar anuncios y reproducir
+     sonido. <strong>No</strong> usa la cámara, el micrófono, los contactos, los
+     archivos ni la ubicación precisa.</p>
+
+  <h2>Contacto</h2>
+  <p>Dudas sobre esta política: <a href="mailto:hatisoftcor@gmail.com">hatisoftcor@gmail.com</a></p>
+  </section>
+  <section class="ban" data-ma="pt" hidden>
+<p class="lead">
+    O Tiny Ocean não pede seu nome, e-mail, telefone nem nenhuma conta.
+    Tudo o que você faz no jogo fica guardado <strong>apenas no seu próprio
+    aparelho</strong>. Nós nunca vemos. A única exceção é a publicidade.
+  </p>
+
+  <h2>O que o app guarda</h2>
+  <p>Guardado só no seu aparelho, nunca enviado para lugar nenhum:</p>
+  <ul>
+    <li>Melhor pontuação e total de pontos</li>
+    <li>Quais das dez espécies você já descobriu</li>
+    <li>Quais cenários você desbloqueou e qual está em uso</li>
+    <li>Sua partida inacabada, para você voltar a ela</li>
+    <li>Som ligado ou não, e o idioma escolhido</li>
+  </ul>
+  <p>Desinstalar o app apaga tudo. Não há backup nem servidor.</p>
+
+  <h2>Publicidade</h2>
+  <p>Usamos o <strong>Google AdMob</strong> para exibir anúncios em banner,
+     intersticiais e com recompensa. Para isso, o Google pode coletar:</p>
+  <ul>
+    <li>Um identificador de publicidade (um ID redefinível, não o seu nome)</li>
+    <li>Localização aproximada deduzida do endereço IP</li>
+    <li>Tipo de aparelho, versão do sistema e sinais básicos de uso</li>
+  </ul>
+  <p>Configuramos o AdMob com classificação máxima de conteúdo
+     <strong>G (adequado para todos)</strong>.</p>
+  <p>Você pode redefinir ou apagar seu identificador de publicidade a qualquer
+     momento em <em>Configurações → Google → Anúncios</em>.</p>
+
+  <h2>Crianças</h2>
+  <p>Todo o conteúdo é classificado como G e adequado ao público geral. O jogo
+     <strong>não é direcionado a crianças menores de 13 anos</strong> — seu
+     público-alvo no Google Play é de 13 anos ou mais. Não coletamos
+     intencionalmente informações pessoais de ninguém, inclusive crianças.</p>
+
+  <h2>Permissões</h2>
+  <p>O app pede apenas as permissões necessárias para exibir anúncios e tocar
+     som. <strong>Não</strong> usa câmera, microfone, contatos, arquivos nem
+     localização precisa.</p>
+
+  <h2>Contato</h2>
+  <p>Dúvidas sobre esta política: <a href="mailto:hatisoftcor@gmail.com">hatisoftcor@gmail.com</a></p>
+  </section>
+  <section class="ban" data-ma="id" hidden>
+<p class="lead">
+    Tiny Ocean tidak meminta nama, email, nomor telepon, atau akun apa pun.
+    Semua yang kamu lakukan di game tersimpan <strong>hanya di perangkatmu
+    sendiri</strong>. Kami tidak pernah melihatnya. Satu-satunya pengecualian
+    adalah iklan.
+  </p>
+
+  <h2>Apa yang disimpan aplikasi</h2>
+  <p>Tersimpan hanya di perangkatmu, tidak pernah dikirim ke mana pun:</p>
+  <ul>
+    <li>Skor terbaik dan total poin</li>
+    <li>Spesies mana dari sepuluh yang sudah kamu temukan</li>
+    <li>Latar mana yang sudah terbuka dan sedang dipakai</li>
+    <li>Ronde yang belum selesai, supaya bisa dilanjutkan</li>
+    <li>Suara nyala atau mati, dan bahasa yang dipilih</li>
+  </ul>
+  <p>Menghapus aplikasi akan menghapus semuanya. Tidak ada cadangan atau server.</p>
+
+  <h2>Iklan</h2>
+  <p>Kami memakai <strong>Google AdMob</strong> untuk menampilkan iklan spanduk,
+     sisipan, dan berhadiah. Untuk itu, Google dapat mengumpulkan:</p>
+  <ul>
+    <li>Identitas iklan (ID yang bisa disetel ulang, bukan namamu)</li>
+    <li>Perkiraan lokasi dari alamat IP</li>
+    <li>Jenis perangkat, versi sistem, dan sinyal pemakaian dasar</li>
+  </ul>
+  <p>Kami menyetel AdMob pada peringkat konten maksimal
+     <strong>G (cocok untuk semua umur)</strong>.</p>
+  <p>Kamu bisa menyetel ulang atau menghapus identitas iklan kapan saja di
+     <em>Setelan → Google → Iklan</em>.</p>
+
+  <h2>Anak-anak</h2>
+  <p>Seluruh konten berperingkat G dan cocok untuk umum. Game ini
+     <strong>tidak ditujukan untuk anak di bawah 13 tahun</strong> — target
+     audiensnya di Google Play adalah 13 tahun ke atas. Kami tidak dengan
+     sengaja mengumpulkan data pribadi siapa pun, termasuk anak-anak.</p>
+
+  <h2>Izin</h2>
+  <p>Aplikasi hanya meminta izin yang diperlukan untuk menampilkan iklan dan
+     memutar suara. <strong>Tidak</strong> memakai kamera, mikrofon, kontak,
+     berkas, atau lokasi presisi.</p>
+
+  <h2>Kontak</h2>
+  <p>Pertanyaan tentang kebijakan ini: <a href="mailto:hatisoftcor@gmail.com">hatisoftcor@gmail.com</a></p>
+  </section>
+
+
+    của bất kỳ ai, kể cả trẻ em.
+  </p>
+
+  <h2>Quyền</h2>
+  <p>
+    App chỉ xin những quyền cần để hiện quảng cáo và phát âm thanh.
+    <strong>Không</strong> dùng camera, micro, danh bạ, tệp hay vị trí chính xác.
+    Quyền ghi âm đã được gỡ hẳn khỏi bản cài đặt.
+  </p>
+
+  <h2>Liên hệ</h2>
+  <p>Thắc mắc về chính sách này: <a href="mailto:hatisoftcor@gmail.com">hatisoftcor@gmail.com</a></p>
 
 </div>
 </main>
 
 <footer>Tiny Ocean · com.tien.tinyocean</footer>
 
+
+<script>
+  //  Chuyển ngôn ngữ. Năm bản xếp chồng nhau thì trang dài lê thê, người đọc
+  //  phải cuộn qua thứ tiếng mình không hiểu mới tới phần của mình.
+  //  Không có JavaScript thì mọi phần vẫn nằm trong HTML, chỉ là hiện hết —
+  //  nội dung không bao giờ biến mất.
+  document.querySelectorAll('.tab').forEach(function (nut) {
+    nut.addEventListener('click', function () {
+      var ma = nut.dataset.ma;
+      document.querySelectorAll('.tab').forEach(function (b) { b.classList.toggle('on', b === nut); });
+      document.querySelectorAll('.ban').forEach(function (p) { p.hidden = p.dataset.ma !== ma; });
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  });
+  //  Mở sẵn đúng thứ tiếng của máy người đọc
+  var may = (navigator.language || 'en').slice(0, 2);
+  var khop = document.querySelector('.tab[data-ma="' + may + '"]');
+  if (khop) khop.click();
+</script>
 </body>
 </html>
