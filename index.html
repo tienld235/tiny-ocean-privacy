@@ -71,7 +71,7 @@
 <main>
 <div class="card">
 
-  <p class="updated">Last updated: 11 September 2026</p>
+  <p class="updated">Last updated: 17 September 2026</p>
 
   <div class="tabs">
     <button class="tab on" data-ma="en">🇬🇧 English</button>
@@ -124,6 +124,9 @@
     You can reset or delete your advertising ID at any time in your device settings,
     under <em>Settings → Google → Ads</em>.
   </p>
+
+  <h2>Data security</h2>
+  <p>Tiny Ocean has no server and no account, so we never receive or store your data anywhere. Your progress is kept in the app's private storage on your device, which other apps cannot read. The advertising data described above is collected and sent by Google's AdMob SDK over encrypted (HTTPS) connections and handled under Google's own privacy policy.</p>
 
   <h2>Children</h2>
   <p>
@@ -192,6 +195,9 @@
     <em>Cài đặt → Google → Quảng cáo</em>.
   </p>
 
+  <h2>Bảo mật dữ liệu</h2>
+  <p>Tiny Ocean không có máy chủ và không có tài khoản, nên chúng tôi không bao giờ nhận hay lưu dữ liệu của bạn ở đâu cả. Tiến độ chơi nằm trong vùng lưu trữ riêng của ứng dụng trên máy bạn, ứng dụng khác không đọc được. Dữ liệu quảng cáo nêu ở trên do bộ công cụ AdMob của Google thu thập và gửi đi qua kết nối mã hoá (HTTPS), và được xử lý theo chính sách quyền riêng tư của Google.</p>
+
   <h2>Trẻ em</h2>
   <p>
     Toàn bộ nội dung ở mức G, phù hợp với mọi lứa tuổi. Game
@@ -242,6 +248,9 @@
   <p>Puedes restablecer o borrar tu identificador de publicidad cuando quieras en
      <em>Ajustes → Google → Anuncios</em>.</p>
 
+  <h2>Seguridad de los datos</h2>
+  <p>Tiny Ocean no tiene servidor ni cuentas, así que nunca recibimos ni guardamos tus datos en ningún sitio. Tu progreso se guarda en el almacenamiento privado de la aplicación en tu dispositivo, que otras aplicaciones no pueden leer. Los datos de publicidad descritos arriba los recoge y envía el SDK de AdMob de Google mediante conexiones cifradas (HTTPS), y se tratan según la política de privacidad de Google.</p>
+
   <h2>Menores</h2>
   <p>Todo el contenido tiene clasificación G y es apto para el público general.
      El juego <strong>no está dirigido a menores de 13 años</strong>: su público
@@ -286,6 +295,9 @@
      <strong>G (adequado para todos)</strong>.</p>
   <p>Você pode redefinir ou apagar seu identificador de publicidade a qualquer
      momento em <em>Configurações → Google → Anúncios</em>.</p>
+
+  <h2>Segurança dos dados</h2>
+  <p>O Tiny Ocean não tem servidor nem contas, então nunca recebemos nem guardamos seus dados em lugar nenhum. Seu progresso fica no armazenamento privado do aplicativo no seu aparelho, que outros aplicativos não conseguem ler. Os dados de publicidade descritos acima são coletados e enviados pelo SDK AdMob do Google por conexões criptografadas (HTTPS) e tratados conforme a política de privacidade do Google.</p>
 
   <h2>Crianças</h2>
   <p>Todo o conteúdo é classificado como G e adequado ao público geral. O jogo
@@ -333,6 +345,9 @@
   <p>Kamu bisa menyetel ulang atau menghapus identitas iklan kapan saja di
      <em>Setelan → Google → Iklan</em>.</p>
 
+  <h2>Keamanan data</h2>
+  <p>Tiny Ocean tidak punya server dan tidak memakai akun, jadi kami tidak pernah menerima atau menyimpan data kamu di mana pun. Progres permainan tersimpan di penyimpanan pribadi aplikasi di HP kamu, yang tidak bisa dibaca aplikasi lain. Data iklan yang dijelaskan di atas dikumpulkan dan dikirim oleh SDK AdMob milik Google melalui koneksi terenkripsi (HTTPS), dan ditangani sesuai kebijakan privasi Google.</p>
+
   <h2>Anak-anak</h2>
   <p>Seluruh konten berperingkat G dan cocok untuk umum. Game ini
      <strong>tidak ditujukan untuk anak di bawah 13 tahun</strong> — target
@@ -348,20 +363,6 @@
   <p>Pertanyaan tentang kebijakan ini: <a href="mailto:hatisoftcor@gmail.com">hatisoftcor@gmail.com</a></p>
   </section>
 
-
-    của bất kỳ ai, kể cả trẻ em.
-  </p>
-
-  <h2>Quyền</h2>
-  <p>
-    App chỉ xin những quyền cần để hiện quảng cáo và phát âm thanh.
-    <strong>Không</strong> dùng camera, micro, danh bạ, tệp hay vị trí chính xác.
-    Quyền ghi âm đã được gỡ hẳn khỏi bản cài đặt.
-  </p>
-
-  <h2>Liên hệ</h2>
-  <p>Thắc mắc về chính sách này: <a href="mailto:hatisoftcor@gmail.com">hatisoftcor@gmail.com</a></p>
-
 </div>
 </main>
 
@@ -369,26 +370,38 @@
 
 
 <script>
+(function () {
   //  Chuyển ngôn ngữ. Năm bản xếp chồng nhau thì trang dài lê thê, người đọc
   //  phải cuộn qua thứ tiếng mình không hiểu mới tới phần của mình.
-  //  Không có JavaScript thì mọi phần vẫn nằm trong HTML, chỉ là hiện hết —
-  //  nội dung không bao giờ biến mất.
-  // Mọi bản ngôn ngữ nằm HIỆN trong HTML; JavaScript chỉ ẩn bớt. Máy tắt JS thì
-  // đọc được cả năm bản xếp nối nhau, chứ không ra trang chỉ có tiếng Anh.
-  document.querySelectorAll('.ban').forEach(function (p, i) { p.hidden = i > 0; });
+  //  Mọi bản ngôn ngữ nằm HIỆN trong HTML; JavaScript chỉ ẩn bớt. Máy tắt JS thì
+  //  đọc được cả năm bản xếp nối nhau, chứ không ra trang chỉ có tiếng Anh.
+  var BAN = ['en', 'vi', 'es', 'pt', 'id'];
+
+  function hien(ma) {
+    document.querySelectorAll('.ban').forEach(function (p) { p.hidden = p.dataset.ma !== ma; });
+    document.querySelectorAll('.tab').forEach(function (b) { b.classList.toggle('on', b.dataset.ma === ma); });
+    document.documentElement.lang = ma;
+    try { history.replaceState(null, '', '#' + ma); } catch (e) {}
+  }
 
   document.querySelectorAll('.tab').forEach(function (nut) {
     nut.addEventListener('click', function () {
-      var ma = nut.dataset.ma;
-      document.querySelectorAll('.tab').forEach(function (b) { b.classList.toggle('on', b === nut); });
-      document.querySelectorAll('.ban').forEach(function (p) { p.hidden = p.dataset.ma !== ma; });
+      hien(nut.dataset.ma);
       window.scrollTo({ top: 0, behavior: 'smooth' });
     });
   });
-  //  Mở sẵn đúng thứ tiếng của máy người đọc
-  var may = (navigator.language || 'en').slice(0, 2);
-  var khop = document.querySelector('.tab[data-ma="' + may + '"]');
-  if (khop) khop.click();
+
+  //  Ưu tiên phần neo trên URL (#vi): app mở trang bằng đúng thứ tiếng người
+  //  chơi đang chọn TRONG GAME, có thể khác thứ tiếng của máy. Không có neo thì
+  //  lấy theo ngôn ngữ máy. 'in' là mã cũ của tiếng Indonesia, vài máy còn trả.
+  var chon = (location.hash || '').replace('#', '');
+  if (BAN.indexOf(chon) < 0) {
+    var may = (navigator.language || 'en').slice(0, 2).toLowerCase();
+    if (may === 'in') may = 'id';
+    chon = BAN.indexOf(may) >= 0 ? may : 'en';
+  }
+  hien(chon);
+})();
 </script>
 </body>
 </html>
