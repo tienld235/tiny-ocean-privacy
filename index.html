@@ -152,7 +152,7 @@
   <h2>Contact</h2>
   <p>Questions about this policy: <a href="mailto:hatisoftcor@gmail.com">hatisoftcor@gmail.com</a></p>
   </section>
-  <section class="ban" data-ma="vi" hidden>
+  <section class="ban" data-ma="vi">
 <h2>Tóm tắt</h2>
   <p class="lead">
     Tiny Ocean không hỏi tên, email, số điện thoại hay bất kỳ tài khoản nào.
@@ -210,7 +210,7 @@
   <h2>Liên hệ</h2>
   <p>Thắc mắc về chính sách này: <a href="mailto:hatisoftcor@gmail.com">hatisoftcor@gmail.com</a></p>
   </section>
-  <section class="ban" data-ma="es" hidden>
+  <section class="ban" data-ma="es">
 <p class="lead">
     Tiny Ocean no pide tu nombre, correo, teléfono ni ninguna cuenta.
     Todo lo que haces en el juego se guarda <strong>solo en tu propio
@@ -256,7 +256,7 @@
   <h2>Contacto</h2>
   <p>Dudas sobre esta política: <a href="mailto:hatisoftcor@gmail.com">hatisoftcor@gmail.com</a></p>
   </section>
-  <section class="ban" data-ma="pt" hidden>
+  <section class="ban" data-ma="pt">
 <p class="lead">
     O Tiny Ocean não pede seu nome, e-mail, telefone nem nenhuma conta.
     Tudo o que você faz no jogo fica guardado <strong>apenas no seu próprio
@@ -301,7 +301,7 @@
   <h2>Contato</h2>
   <p>Dúvidas sobre esta política: <a href="mailto:hatisoftcor@gmail.com">hatisoftcor@gmail.com</a></p>
   </section>
-  <section class="ban" data-ma="id" hidden>
+  <section class="ban" data-ma="id">
 <p class="lead">
     Tiny Ocean tidak meminta nama, email, nomor telepon, atau akun apa pun.
     Semua yang kamu lakukan di game tersimpan <strong>hanya di perangkatmu
@@ -373,6 +373,10 @@
   //  phải cuộn qua thứ tiếng mình không hiểu mới tới phần của mình.
   //  Không có JavaScript thì mọi phần vẫn nằm trong HTML, chỉ là hiện hết —
   //  nội dung không bao giờ biến mất.
+  // Mọi bản ngôn ngữ nằm HIỆN trong HTML; JavaScript chỉ ẩn bớt. Máy tắt JS thì
+  // đọc được cả năm bản xếp nối nhau, chứ không ra trang chỉ có tiếng Anh.
+  document.querySelectorAll('.ban').forEach(function (p, i) { p.hidden = i > 0; });
+
   document.querySelectorAll('.tab').forEach(function (nut) {
     nut.addEventListener('click', function () {
       var ma = nut.dataset.ma;
